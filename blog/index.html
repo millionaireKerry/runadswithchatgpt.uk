@@ -1,38 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | ChatGPT Advertising Guide</title>
-    <link rel="stylesheet" href="../styles.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSR8VEQMJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', 'G-HSR8VEQMJF');
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3819753512414775"
+     crossorigin="anonymous"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | AI Advertising Insights | ChatGPT Advertising Guide</title>
+<meta name="description" content="Expert insights on AI advertising, ChatGPT marketing, and the future of digital advertising for UK businesses.">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {{
+  --bg-dark: #0a0f1a;
+  --bg-darker: #060a12;
+  --teal: #00c8c8;
+  --white: #ffffff;
+  --gray-light: #e5e7eb;
+  --gray-mid: #9ca3af;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+}}
+
+* {{ margin: 0; padding: 0; box-sizing: border-box; }}
+
+body {{
+  font-family: var(--font-body);
+  background: var(--bg-dark);
+  color: var(--white);
+  line-height: 1.6;
+}}
+
+.site-nav {{
+  background: rgba(6, 10, 18, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}}
+
+.site-nav a {{
+  color: var(--gray-mid);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}}
+
+.site-nav a:hover {{ color: var(--teal); }}
+.site-nav a.active {{ color: var(--teal); }}
+
+.blog-hero {{
+  background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+  padding: 4rem 2rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}}
+
+.blog-hero h1 {{
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--white) 0%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}}
+
+.blog-hero p {{
+  color: var(--gray-mid);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}}
+
+.blog-grid {{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}}
+
+.post-card {{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}}
+
+.post-card:hover {{
+  border-color: var(--teal);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,200,200,0.1);
+}}
+
+.post-card .category {{
+  display: inline-block;
+  background: rgba(0,200,200,0.1);
+  color: var(--teal);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0,200,200,0.2);
+  width: fit-content;
+}}
+
+.post-card h2 {{
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}}
+
+.post-card h2 a {{
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}}
+
+.post-card h2 a:hover {{ color: var(--teal); }}
+
+.post-card .meta {{
+  font-size: 0.82rem;
+  color: var(--gray-mid);
+  margin-bottom: 1rem;
+}}
+
+.post-card p {{
+  color: var(--gray-mid);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}}
+
+.read-more {{
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.2s;
+}}
+
+.read-more:hover {{ gap: 0.7rem; }}
+
+.footer {{
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: var(--gray-mid);
+  font-size: 0.9rem;
+}}
+
+.footer a {{ color: var(--teal); text-decoration: none; }}
+
+@media (max-width: 768px) {{
+  .blog-grid {{ grid-template-columns: 1fr; padding: 2rem 1.5rem; }}
+}}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-        </nav>
-    </header>
-    <main>
-        <h1>AI Advertising Insights</h1>
-        <div class="blog-list">
-            <div class="post">
-                <h2><a href="chatgpt-has-adverts-now.html">ChatGPT Has Adverts Now. Here's What That Actually Means for Your Business.</a></h2>
-                <p class="meta">Published 27 February 2026 &nbsp;·&nbsp; 6 min read</p>
-                <p>OpenAI launched ChatGPT advertising in February 2026. Here's what contextual targeting, agentic commerce, and GEO mean for your business right now.</p>
-                <a href="chatgpt-has-adverts-now.html">Read more &rarr;</a>
-            </div>
 
-            <div class="post">
-                <h2><a href="post1.html">The Rise of AI in Advertising</a></h2>
-                <p class="meta">Published on February 24, 2026</p>
-                <p>Artificial intelligence is no longer a futuristic concept; it's a present-day reality that's reshaping industries, and advertising is no exception...</p>
-                <a href="post1.html">Read more</a>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2026 UK Business Automations. All rights reserved.</p>
-    </footer>
+<nav class="site-nav">
+  <a href="/">Home</a>
+  <a href="/blog/" class="active">Blog</a>
+</nav>
+
+<div class="blog-hero">
+  <h1>AI Advertising Insights</h1>
+  <p>Expert guides, news, and analysis on ChatGPT advertising and the future of AI-powered marketing.</p>
+</div>
+
+<div class="blog-grid">
+
+  <div class="post-card">
+    <span class="category">AI Advertising News</span>
+    <h2><a href="chatgpt-has-adverts-now.html">ChatGPT Has Adverts Now. Here&rsquo;s What That Actually Means for Your Business.</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 6 min read</p>
+    <p>OpenAI launched ChatGPT advertising in February 2026. Here&rsquo;s what contextual targeting, agentic commerce, and GEO mean for your business right now.</p>
+    <a href="chatgpt-has-adverts-now.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">AI Strategy</span>
+    <h2><a href="what-is-aeo-a-guide-for-2026.html">What is AI Engine Optimisation (AEO)? A Guide for 2026</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>For years, we have all been obsessed with SEO. Now there is a new acronym in town: AEO. It stands for AI Engine Optimisation, and it is about to become just as important for your business.</p>
+    <a href="what-is-aeo-a-guide-for-2026.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Digital Marketing</span>
+    <h2><a href="5-ways-chatgpt-will-change-digital-marketing.html">5 Ways ChatGPT Will Change Digital Marketing Forever</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>ChatGPT is not just another tool. It is a fundamental shift in how we interact with information, and it is poised to change the landscape of digital marketing.</p>
+    <a href="5-ways-chatgpt-will-change-digital-marketing.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Business Strategy</span>
+    <h2><a href="how-to-prepare-your-business-for-ai-advertising.html">How to Prepare Your Business for AI-Powered Advertising</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>AI-powered advertising is no longer a concept from a science fiction film. It is here, and it is already changing how businesses connect with customers.</p>
+    <a href="how-to-prepare-your-business-for-ai-advertising.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Privacy &amp; Advertising</span>
+    <h2><a href="death-of-the-cookie.html">The Death of the Cookie: Why Contextual AI Ads Are the Future</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>The third-party cookie is finally crumbling. Discover why contextual advertising, powered by AI, is the future of reaching customers in a privacy-first world.</p>
+    <a href="death-of-the-cookie.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Case Study</span>
+    <h2><a href="case-study-early-adopters-ai-marketing.html">Case Study: How Early Adopters Are Winning with AI Marketing</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 6 min read</p>
+    <p>To understand the real world impact of AI marketing, let us look at how a direct to consumer brand transformed their results with a conversational AI strategy.</p>
+    <a href="case-study-early-adopters-ai-marketing.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">UK Business</span>
+    <h2><a href="chatgpt-ads-in-the-uk.html">ChatGPT Ads in the UK: What British Businesses Need to Know</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>The arrival of ChatGPT advertising is a global event, but its impact will be felt differently in different markets. For businesses in the UK, there are unique opportunities to consider.</p>
+    <a href="chatgpt-ads-in-the-uk.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Compliance</span>
+    <h2><a href="gdpr-and-ai-advertising.html">Navigating GDPR and AI Advertising: A UK Compliance Guide</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>The GDPR changed the face of digital marketing in Europe. Now, with the rise of AI advertising, many UK businesses are wondering how to innovate while staying compliant.</p>
+    <a href="gdpr-and-ai-advertising.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">UK Business</span>
+    <h2><a href="how-uk-smes-can-compete.html">How UK SMEs Can Compete in the New Age of AI Marketing</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>The rise of AI marketing can feel intimidating for small and medium-sized enterprises. But the truth is, AI can be a great leveller for UK SMEs.</p>
+    <a href="how-uk-smes-can-compete.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Industry Analysis</span>
+    <h2><a href="impact-of-ai-on-uk-digital-advertising.html">The Impact of AI on the UK&rsquo;s Digital Advertising Economy</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 6 min read</p>
+    <p>The UK has the largest and most advanced digital advertising market in Europe. The introduction of AI on a mass scale is a seismic shift for the whole industry.</p>
+    <a href="impact-of-ai-on-uk-digital-advertising.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Enterprise</span>
+    <h2><a href="enterprise-strategies-for-chatgpt-advertising.html">Scaling Up: Enterprise Strategies for ChatGPT Advertising</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 6 min read</p>
+    <p>For enterprise businesses, the question is not whether to invest in AI advertising, but how to do it at scale. Here is a strategic guide for large organisations.</p>
+    <a href="enterprise-strategies-for-chatgpt-advertising.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Enterprise</span>
+    <h2><a href="roi-of-ai.html">The ROI of AI: Building a Business Case for Conversational Ads</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>In any large organisation, securing budget for a new marketing initiative requires a solid business case. Here is how to build one for conversational AI advertising.</p>
+    <a href="roi-of-ai.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">B2B Marketing</span>
+    <h2><a href="b2b-marketing-with-chatgpt.html">Beyond the Hype: A Realistic Guide to B2B Marketing with ChatGPT</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 6 min read</p>
+    <p>While much of the conversation around ChatGPT has focused on consumer applications, the potential for B2B marketing is just as significant.</p>
+    <a href="b2b-marketing-with-chatgpt.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+  <div class="post-card">
+    <span class="category">Enterprise</span>
+    <h2><a href="integrating-ai-into-your-martech-stack.html">Integrating AI into Your Enterprise Martech Stack</a></h2>
+    <p class="meta">27 February 2026 &nbsp;&middot;&nbsp; 5 min read</p>
+    <p>For enterprise businesses, the marketing technology stack can be a complex beast. Integrating new AI-powered tools requires a thoughtful and strategic approach.</p>
+    <a href="integrating-ai-into-your-martech-stack.html" class="read-more">Read more &rarr;</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>Educational content by <a href="https://ukbusinessautomations.com" target="_blank" rel="noopener">UK Business Automations</a> &nbsp;&middot;&nbsp; Independent resource, not affiliated with OpenAI</p>
+</footer>
+
 </body>
 </html>
